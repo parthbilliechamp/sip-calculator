@@ -1,0 +1,30 @@
+.summary-card {
+    padding: 16px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .summary-title {
+    margin-bottom: 8px;
+    background-color: "#07889B",
+  }
+  
+  .divider {
+    margin: 16px 0;
+  }
+  
+  .table-container {
+    margin-top: 16px;
+  }
+  
+  .table-header {
+    font-weight: bold;
+  }
+  
+  .table-row:nth-of-type(even) {
+    background-color: #66B9BF;
+  }
+
+  .table-row:nth-of-type(odd) {
+    background-color: #EEAA7B;
+  }
