@@ -5,7 +5,7 @@ import NavigationBar from "../components/NavigationBar";
 import InputForm from "../components/InputForm";
 import Summary from "../components/Summary";
 import FutureValuesTable from "../components/FutureValuesTable";
-import { Grid, Container, Paper } from "@mui/material";
+import { Grid, Container } from "@mui/material";
 import SIPChart from "../components/SIPChart";
 
 function HomePage() {
@@ -59,17 +59,14 @@ function HomePage() {
 
   const paperStyles = {
     width: "90%",
-    margin: "25px auto",
     backgroundColor: "#E2E2E2",
+    marginTop: "60px",
   };
 
   return (
     <div>
       <NavigationBar />
-      <Paper
-        elevation={1}
-        style={paperStyles}
-      >
+      <Container style={paperStyles}>
         <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={7}>
@@ -107,7 +104,7 @@ function HomePage() {
             </Grid>
           </Grid>
         </Container>
-      </Paper>
+      </Container>
     </div>
   );
 }

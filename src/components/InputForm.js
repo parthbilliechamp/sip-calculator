@@ -7,6 +7,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import Slider from "@mui/material/Slider";
 
 function InputForm({
   monthlyInvestment,
@@ -20,6 +21,21 @@ function InputForm({
   const cardStyles = {
     backgroundColor: "#E2E2E2",
     marginTop: 20,
+  };
+
+  const handleMonthlyInvestmentChange = (value) => {
+    setMonthlyInvestment(value);
+    calculateSIP();
+  };
+
+  const handleInvestmentPeriodChange = (value) => {
+    setInvestmentPeriod(value);
+    calculateSIP();
+  };
+
+  const handleExpectedReturnRate = (value) => {
+    setExpectedReturnRate(value);
+    calculateSIP();
   };
 
   return (
@@ -38,9 +54,9 @@ function InputForm({
                   type="number"
                   value={monthlyInvestment}
                   onChange={(e) => {
-                    setMonthlyInvestment(e.target.value);
-                    calculateSIP();
+                    handleMonthlyInvestmentChange(e.target.value);
                   }}
+                  color="success"
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -51,22 +67,24 @@ function InputForm({
                   type="number"
                   value={investmentPeriod}
                   onChange={(e) => {
-                    setInvestmentPeriod(e.target.value);
-                    calculateSIP();
+                    handleInvestmentPeriodChange(e.target.value);
                   }}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
-                <TextField
-                  label="Expected Amount Returns"
-                  fullWidth
-                  variant="outlined"
-                  type="number"
+                <Typography gutterBottom variant="h8">
+                Expected Amount Returns (in %) : {expectedReturnRate}
+                </Typography>
+                <Slider
                   value={expectedReturnRate}
                   onChange={(e) => {
-                    setExpectedReturnRate(e.target.value);
-                    calculateSIP();
+                    handleExpectedReturnRate(e.target.value);
                   }}
+                  valueLabelDisplay="auto"
+                  step={1}
+                  min={1}
+                  max={100}
+                  sx={{ color: "#66B9BF" }}
                 />
               </Grid>
             </Grid>
