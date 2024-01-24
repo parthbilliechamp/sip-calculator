@@ -17,7 +17,8 @@ function Summary({ investedAmount, estimatedReturns, totalAmount }) {
 
   const paperStyles = {
     backgroundColor: "#E2E2E2",
-    marginTop: 20,
+    marginTop: "10px",
+    marginBottom: "50px",
   };
 
   return (

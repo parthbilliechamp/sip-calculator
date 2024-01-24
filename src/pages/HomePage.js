@@ -57,16 +57,18 @@ function HomePage() {
     calculateSIP();
   });
 
+  const paperStyles = {
+    width: "90%",
+    margin: "25px auto",
+    backgroundColor: "#E2E2E2",
+  };
+
   return (
     <div>
       <NavigationBar />
       <Paper
-        elevation={3}
-        style={{
-          width: "90%",
-          margin: "25px auto",
-          backgroundColor: "#EEAA7B",
-        }}
+        elevation={1}
+        style={paperStyles}
       >
         <Container>
           <Grid container spacing={3}>

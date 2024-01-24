@@ -18,7 +18,8 @@ const FutureValuesTable = ({ data }) => {
 
   const paperStyles = {
     backgroundColor: "#E2E2E2",
-    marginTop: 20,
+    marginTop: "10px",
+    marginBottom: "30px",
     padding: "16px",
   };
 

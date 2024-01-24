@@ -24,7 +24,3 @@
   .table-row:nth-of-type(even) {
     background-color: #66B9BF;
   }
-
-  .table-row:nth-of-type(odd) {
-    background-color: #EEAA7B;
-  }
